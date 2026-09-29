@@ -4,692 +4,900 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>XYZ | Portfolio</title>
+    <meta name="description" content="XYZ - B.Voc Graduate, Junior Developer and Software Support Professional from Kochi, Kerala.">
+    <meta name="author" content="XYZ">
 
-    <meta
-        name="description"
-        content="XYZ - B.Voc Graduate, Junior Developer and Software Support Professional."
-    >
+    <title>XYZ | Junior Developer & Software Support</title>
 
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <header class="header">
-        <nav class="navbar">
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+    <header class="header" id="header">
+        <div class="container nav-container">
 
             <a href="#home" class="logo">XYZ<span>.</span></a>
 
             <button
-                class="menu-btn"
-                id="menuBtn"
-                aria-label="Open navigation"
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
             >
-                ☰
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#organizations">Organizations</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#involvement" class="nav-link">Involvement</a>
+                <a href="#contact" class="nav-link">Contact</a>
 
-            <button
-                class="theme-btn"
-                id="themeBtn"
-                aria-label="Toggle theme"
-            >
-                ☾
-            </button>
+                <button
+                    class="theme-toggle"
+                    id="theme-toggle"
+                    aria-label="Toggle dark and light theme"
+                >
+                    ☀
+                </button>
+            </nav>
 
-        </nav>
+        </div>
     </header>
 
 
-    <!-- Hero -->
-    <section class="hero" id="home">
+    <main>
 
-        <div class="hero-content">
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+        <section class="hero section" id="home">
 
-            <p class="eyebrow">HELLO, I'M</p>
+            <div class="container hero-grid">
 
-            <h1>XYZ<span>.</span></h1>
+                <div class="hero-content">
 
-            <h2>
-                Junior Developer &
-                <strong>Software Support Professional</strong>
-            </h2>
+                    <p class="hero-greeting">
+                        Hello, I'm
+                    </p>
 
-            <p class="hero-description">
-                B.Voc graduate specializing in Software Application Development,
-                with 2+ years of experience in application support,
-                development, databases, troubleshooting, and web technologies.
-            </p>
+                    <h1>
+                        XYZ<span>.</span>
+                    </h1>
 
-            <div class="hero-buttons">
+                    <h2>
+                        Junior Developer &amp;<br>
+                        Software Support Professional
+                    </h2>
 
-                <a href="#projects" class="btn primary">
-                    View Projects
-                </a>
+                    <p class="hero-description">
+                        B.Voc graduate with experience in software support,
+                        application development, database management,
+                        troubleshooting, and web technologies.
+                    </p>
 
-                <a href="#contact" class="btn secondary">
-                    Contact Me
-                </a>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            View My Work
+                        </a>
 
-            </div>
+                        <a href="#contact" class="btn btn-secondary">
+                            Get In Touch
+                        </a>
+                    </div>
 
-            <div class="social-links">
+                    <div class="hero-location">
+                        <span>📍</span>
+                        Kochi, Kerala, India
+                    </div>
 
-                <a
-                    href="https://github.com/dummygitt"
-                    target="_blank"
-                >
-                    GitHub
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/xyz-sample"
-                    target="_blank"
-                >
-                    LinkedIn
-                </a>
-
-                <a href="mailto:xyz.sample@email.com">
-                    Email
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-code">
-
-            <div class="code-window">
-
-                <div class="code-title">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-
-                    <span class="filename">
-                        developer.py
-                    </span>
                 </div>
 
-                <pre><code><span class="purple">class</span> <span class="blue">Developer</span>:
 
-    name = <span class="green">"XYZ"</span>
-    education = <span class="green">"B.Voc"</span>
-    experience = <span class="orange">2</span>
+                <!-- Code Window -->
+                <div class="code-window">
 
-    skills = [
-        <span class="green">"Python"</span>,
-        <span class="green">"Java"</span>,
-        <span class="green">"JavaScript"</span>,
-        <span class="green">"SQL"</span>
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span class="window-title">
+                            developer.py
+                        </span>
+                    </div>
+
+                    <div class="code-content">
+<pre><code><span class="code-keyword">class</span> <span class="code-class">Developer</span>:
+
+    <span class="code-variable">name</span> = <span class="code-string">"XYZ"</span>
+    <span class="code-variable">role</span> = <span class="code-string">"Junior Developer"</span>
+
+    <span class="code-variable">skills</span> = [
+        <span class="code-string">"Python"</span>,
+        <span class="code-string">"Java"</span>,
+        <span class="code-string">"JavaScript"</span>,
+        <span class="code-string">"SQL"</span>,
+        <span class="code-string">"Git"</span>
     ]
 
-    status = <span class="green">"Learning & Building"</span></code></pre>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- About -->
-    <section class="section" id="about">
-
-        <div class="section-title">
-            <span>01</span>
-            <h2>About Me</h2>
-        </div>
-
-        <div class="about-grid">
-
-            <div class="about-text">
-
-                <p class="large-text">
-                    I'm a B.Voc graduate focused on building practical
-                    software solutions and supporting applications.
-                </p>
-
-                <p>
-                    I have experience working with software applications,
-                    databases, web technologies, testing, troubleshooting,
-                    and technical documentation.
-                </p>
-
-                <p>
-                    My professional experience has given me exposure to
-                    both software development and application support
-                    environments.
-                </p>
-
-                <p>
-                    I enjoy solving problems, learning new technologies,
-                    collaborating with teams, and turning ideas into
-                    functional applications.
-                </p>
-
-            </div>
-
-
-            <div class="info-cards">
-
-                <div class="info-card">
-                    <div class="info-icon">🎓</div>
-                    <div>
-                        <small>Education</small>
-                        <h3>B.Voc</h3>
-                        <p>Software Application Development</p>
+    <span class="code-keyword">def</span> <span class="code-function">solve_problems</span>(self):
+        <span class="code-keyword">return</span> <span class="code-string">"Build &amp; Improve"</span></code></pre>
                     </div>
+
                 </div>
 
-                <div class="info-card">
-                    <div class="info-icon">💼</div>
-                    <div>
-                        <small>Experience</small>
-                        <h3>2+ Years</h3>
-                        <p>Development & Application Support</p>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT SECTION
+        ========================== -->
+        <section class="section about-section" id="about">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">01 — About Me</p>
+
+                    <h2>
+                        Turning technical challenges<br>
+                        into practical solutions.
+                    </h2>
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-text">
+
+                        <p>
+                            I am a B.Voc graduate specializing in Software
+                            Application Development with practical experience
+                            in software support, application development,
+                            database management, and technical troubleshooting.
+                        </p>
+
+                        <p>
+                            Currently working as a Junior Software Support
+                            Associate, I work with internal applications,
+                            SQL databases, testing, debugging, documentation,
+                            and application maintenance.
+                        </p>
+
+                        <p>
+                            I enjoy understanding technical problems,
+                            finding practical solutions, and continuously
+                            improving my programming and software development
+                            skills.
+                        </p>
+
                     </div>
-                </div>
 
-                <div class="info-card">
-                    <div class="info-icon">📍</div>
-                    <div>
-                        <small>Location</small>
-                        <h3>Kochi</h3>
-                        <p>Kerala, India</p>
+                    <div class="about-details">
+
+                        <div class="detail-item">
+                            <span class="detail-label">Education</span>
+                            <span class="detail-value">
+                                B.Voc — Software Application Development
+                            </span>
+                        </div>
+
+                        <div class="detail-item">
+                            <span class="detail-label">Experience</span>
+                            <span class="detail-value">
+                                2+ Years
+                            </span>
+                        </div>
+
+                        <div class="detail-item">
+                            <span class="detail-label">Location</span>
+                            <span class="detail-value">
+                                Kochi, Kerala, India
+                            </span>
+                        </div>
+
+                        <div class="detail-item">
+                            <span class="detail-label">Focus</span>
+                            <span class="detail-value">
+                                Development &amp; Application Support
+                            </span>
+                        </div>
+
                     </div>
+
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
 
+        <!-- =========================
+             SKILLS SECTION
+        ========================== -->
+        <section class="section skills-section" id="skills">
 
-    <!-- Skills -->
-    <section class="section alternate" id="skills">
+            <div class="container">
 
-        <div class="section-title">
-            <span>02</span>
-            <h2>Technical Skills</h2>
-        </div>
+                <div class="section-heading">
+                    <p class="section-label">02 — Technical Skills</p>
 
-        <p class="section-intro">
-            Technologies and tools I use for development,
-            application support, and problem solving.
-        </p>
-
-
-        <div class="skills-grid">
-
-            <div class="skill-card">
-                <div class="skill-symbol python">Py</div>
-                <h3>Python</h3>
-                <p>Application development & scripting</p>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-symbol java">J</div>
-                <h3>Java</h3>
-                <p>Application development</p>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-symbol js">JS</div>
-                <h3>JavaScript</h3>
-                <p>Web application functionality</p>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-symbol html">H</div>
-                <h3>HTML / CSS</h3>
-                <p>Web interfaces & layouts</p>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-symbol sql">DB</div>
-                <h3>SQL</h3>
-                <p>Data management & queries</p>
-            </div>
-
-            <div class="skill-card">
-                <div class="skill-symbol git">Git</div>
-                <h3>Git</h3>
-                <p>Version control & collaboration</p>
-            </div>
-
-        </div>
-
-
-        <div class="skill-tags">
-
-            <span>Database Management</span>
-            <span>Software Testing</span>
-            <span>Debugging</span>
-            <span>Technical Documentation</span>
-            <span>Application Support</span>
-
-        </div>
-
-    </section>
-
-
-    <!-- Experience -->
-    <section class="section" id="experience">
-
-        <div class="section-title">
-            <span>03</span>
-            <h2>Experience</h2>
-        </div>
-
-
-        <div class="timeline">
-
-            <article class="experience-card">
-
-                <div class="timeline-dot"></div>
-
-                <div class="experience-date">
-                    July 2024 — Present
-                </div>
-
-                <h3>Junior Software Support Associate</h3>
-
-                <h4>ABC Technologies Pvt. Ltd. · Kochi</h4>
-
-                <ul>
-                    <li>
-                        Provided technical support and troubleshooting
-                        assistance for internal business applications.
-                    </li>
-
-                    <li>
-                        Assisted in developing and maintaining
-                        small-scale software applications.
-                    </li>
-
-                    <li>
-                        Used SQL to retrieve, update, and validate
-                        application data.
-                    </li>
-
-                    <li>
-                        Participated in application testing,
-                        bug reporting, and deployment activities.
-                    </li>
-
-                    <li>
-                        Prepared technical documentation and
-                        application guides.
-                    </li>
-                </ul>
-
-            </article>
-
-
-            <article class="experience-card">
-
-                <div class="timeline-dot"></div>
-
-                <div class="experience-date">
-                    June 2023 — May 2024
-                </div>
-
-                <h3>Software Development Intern / Trainee</h3>
-
-                <h4>Tech Solutions India · Kochi</h4>
-
-                <ul>
-                    <li>
-                        Assisted developers in creating and testing
-                        web-based applications.
-                    </li>
-
-                    <li>
-                        Developed basic application components
-                        using Python and JavaScript.
-                    </li>
-
-                    <li>
-                        Created and modified SQL queries for
-                        data retrieval and reporting.
-                    </li>
-
-                    <li>
-                        Performed functional testing and documented
-                        software defects.
-                    </li>
-                </ul>
-
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- Projects -->
-    <section class="section alternate" id="projects">
-
-        <div class="section-title">
-            <span>04</span>
-            <h2>Featured Projects</h2>
-        </div>
-
-        <p class="section-intro">
-            Practical projects demonstrating programming,
-            database, and application development skills.
-        </p>
-
-
-        <div class="projects-grid">
-
-            <article class="project-card">
-
-                <div class="project-icon">📁</div>
-
-                <h3>Inventory Management System</h3>
-
-                <p>
-                    A practical inventory management application
-                    for tracking products, stock levels, and
-                    inventory records.
-                </p>
-
-                <ul>
-                    <li>Add, update and delete records</li>
-                    <li>Product search functionality</li>
-                    <li>SQL-based data management</li>
-                </ul>
-
-                <div class="project-tech">
-                    <span>Python</span>
-                    <span>SQL</span>
-                    <span>HTML/CSS</span>
-                </div>
-
-                <a
-                    href="https://github.com/dummygitt"
-                    target="_blank"
-                    class="project-link"
-                >
-                    View on GitHub →
-                </a>
-
-            </article>
-
-
-            <article class="project-card">
-
-                <div class="project-icon">📁</div>
-
-                <h3>Student Performance Management System</h3>
-
-                <p>
-                    An application for maintaining student academic
-                    records and generating basic performance reports.
-                </p>
-
-                <ul>
-                    <li>Student record management</li>
-                    <li>Database connectivity</li>
-                    <li>Performance reporting</li>
-                </ul>
-
-                <div class="project-tech">
-                    <span>Java</span>
-                    <span>SQL</span>
-                </div>
-
-                <a
-                    href="https://github.com/dummygitt"
-                    target="_blank"
-                    class="project-link"
-                >
-                    View on GitHub →
-                </a>
-
-            </article>
-
-
-            <article class="project-card">
-
-                <div class="project-icon">📁</div>
-
-                <h3>Web Application Practice</h3>
-
-                <p>
-                    A collection of web development exercises
-                    created to practice frontend development and
-                    JavaScript functionality.
-                </p>
-
-                <ul>
-                    <li>Responsive layouts</li>
-                    <li>Interactive components</li>
-                    <li>JavaScript functionality</li>
-                </ul>
-
-                <div class="project-tech">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-
-                <a
-                    href="https://github.com/dummygitt"
-                    target="_blank"
-                    class="project-link"
-                >
-                    View on GitHub →
-                </a>
-
-            </article>
-
-        </div>
-
-    </section>
-
-
-    <!-- Organizations -->
-    <section class="section" id="organizations">
-
-        <div class="section-title">
-            <span>05</span>
-            <h2>Professional Involvement</h2>
-        </div>
-
-
-        <div class="organization-grid">
-
-            <article class="organization-card">
-
-                <div class="organization-icon">
-                    👥
-                </div>
-
-                <div>
-
-                    <span class="organization-role">
-                        MEMBER · 2023 — PRESENT
-                    </span>
-
-                    <h3>
-                        Computer Society of India
-                    </h3>
+                    <h2>
+                        Tools I work with.
+                    </h2>
 
                     <p>
-                        Participated in technical seminars,
-                        workshops, technology sessions, and
-                        professional development activities.
+                        A practical technology stack developed through
+                        academic projects, internships, and professional work.
+                    </p>
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <div class="skill-icon">PY</div>
+                        <h3>Python</h3>
+                        <p>
+                            Application development, scripting,
+                            problem solving and automation.
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">JV</div>
+                        <h3>Java</h3>
+                        <p>
+                            Object-oriented programming and
+                            database-connected applications.
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">JS</div>
+                        <h3>JavaScript</h3>
+                        <p>
+                            Interactive web functionality and
+                            application components.
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">&lt;/&gt;</div>
+                        <h3>HTML / CSS</h3>
+                        <p>
+                            Responsive layouts and
+                            web interface development.
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">DB</div>
+                        <h3>SQL</h3>
+                        <p>
+                            Data retrieval, updates, validation,
+                            reporting and database management.
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">GIT</div>
+                        <h3>Git</h3>
+                        <p>
+                            Version control, source management
+                            and collaborative development.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="additional-skills">
+
+                    <span>Database Management</span>
+                    <span>Web Application Development</span>
+                    <span>Software Testing</span>
+                    <span>Debugging</span>
+                    <span>Technical Troubleshooting</span>
+                    <span>Technical Documentation</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EXPERIENCE SECTION
+        ========================== -->
+        <section class="section experience-section" id="experience">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">03 — Experience</p>
+
+                    <h2>
+                        Professional experience.
+                    </h2>
+                </div>
+
+
+                <div class="timeline">
+
+                    <!-- Experience 1 -->
+                    <div class="timeline-item">
+
+                        <div class="timeline-marker"></div>
+
+                        <div class="timeline-content">
+
+                            <div class="experience-header">
+
+                                <div>
+                                    <h3>
+                                        Junior Software Support Associate
+                                    </h3>
+
+                                    <h4>
+                                        ABC Technologies Pvt. Ltd.
+                                    </h4>
+                                </div>
+
+                                <span class="experience-date">
+                                    July 2024 — Present
+                                </span>
+
+                            </div>
+
+                            <p class="experience-location">
+                                Kochi, Kerala
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Provide technical support and
+                                    troubleshooting for internal applications.
+                                </li>
+
+                                <li>
+                                    Develop and maintain small-scale
+                                    application features.
+                                </li>
+
+                                <li>
+                                    Perform SQL data retrieval, updates,
+                                    and validation.
+                                </li>
+
+                                <li>
+                                    Coordinate application issues and
+                                    communicate technical requirements.
+                                </li>
+
+                                <li>
+                                    Create technical documentation,
+                                    user guides, and troubleshooting notes.
+                                </li>
+
+                                <li>
+                                    Perform application testing,
+                                    bug reporting, and deployment support.
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Experience 2 -->
+                    <div class="timeline-item">
+
+                        <div class="timeline-marker"></div>
+
+                        <div class="timeline-content">
+
+                            <div class="experience-header">
+
+                                <div>
+                                    <h3>
+                                        Software Development Intern / Trainee
+                                    </h3>
+
+                                    <h4>
+                                        Tech Solutions India
+                                    </h4>
+                                </div>
+
+                                <span class="experience-date">
+                                    June 2023 — May 2024
+                                </span>
+
+                            </div>
+
+                            <p class="experience-location">
+                                Kochi, Kerala
+                            </p>
+
+                            <ul>
+                                <li>
+                                    Assisted with web application
+                                    development and testing.
+                                </li>
+
+                                <li>
+                                    Worked with Python and JavaScript
+                                    application components.
+                                </li>
+
+                                <li>
+                                    Created SQL queries and
+                                    generated reports.
+                                </li>
+
+                                <li>
+                                    Performed functional testing and
+                                    documented software defects.
+                                </li>
+
+                                <li>
+                                    Participated in development
+                                    discussions and team meetings.
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS SECTION
+        ========================== -->
+        <section class="section projects-section" id="projects">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">04 — Projects</p>
+
+                    <h2>
+                        Things I've built.
+                    </h2>
+
+                    <p>
+                        Academic and practical projects that demonstrate
+                        my programming, database, and application
+                        development experience.
                     </p>
 
                 </div>
 
-            </article>
+
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <article class="project-card">
+
+                        <div class="project-number">
+                            01
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Inventory Management System
+                            </h3>
+
+                            <p>
+                                A database-driven inventory application
+                                designed to manage inventory records,
+                                search products, and perform CRUD
+                                operations through a simple interface.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>SQL</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+
+                        </div>
+
+                    </article>
 
 
-            <article class="organization-card">
+                    <!-- Project 2 -->
+                    <article class="project-card">
 
-                <div class="organization-icon">
-                    🤝
+                        <div class="project-number">
+                            02
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Student Performance Management System
+                            </h3>
+
+                            <p>
+                                A Java and SQL application for managing
+                                student academic records, connecting to
+                                a database, and generating performance
+                                reports.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>SQL</span>
+                                <span>Database</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
                 </div>
 
-                <div>
+            </div>
 
-                    <span class="organization-role">
-                        VOLUNTEER · 2022 — 2024
-                    </span>
+        </section>
 
-                    <h3>
-                        B.Voc Technical Forum
-                    </h3>
 
-                    <p>
-                        Assisted with technical workshops,
-                        peer-learning sessions, student development
-                        programs, and technical events.
+        <!-- =========================
+             PROFESSIONAL INVOLVEMENT
+        ========================== -->
+        <section class="section involvement-section" id="involvement">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        05 — Professional Involvement
                     </p>
 
+                    <h2>
+                        Learning beyond the classroom.
+                    </h2>
+
                 </div>
 
-            </article>
 
-        </div>
+                <div class="involvement-grid">
 
-    </section>
+                    <div class="involvement-card">
+
+                        <div class="involvement-icon">
+                            CSI
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Computer Society of India
+                            </h3>
+
+                            <p class="involvement-role">
+                                Member · 2023 — Present
+                            </p>
+
+                            <p>
+                                Participate in seminars, workshops,
+                                professional development activities,
+                                and sessions focused on emerging
+                                technologies.
+                            </p>
+
+                        </div>
+
+                    </div>
 
 
-    <!-- Contact -->
-    <section class="contact-section" id="contact">
+                    <div class="involvement-card">
 
-        <div class="contact-container">
+                        <div class="involvement-icon">
+                            BV
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                B.Voc Technical Forum
+                            </h3>
+
+                            <p class="involvement-role">
+                                Volunteer · 2022 — 2024
+                            </p>
+
+                            <p>
+                                Supported technical workshops,
+                                peer-learning activities, student
+                                development initiatives, and
+                                technical events.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             EDUCATION & CERTIFICATIONS
+        ========================== -->
+        <section class="section education-section">
+
+            <div class="container">
+
+                <div class="two-column-section">
+
+                    <!-- Education -->
+                    <div>
+
+                        <div class="section-heading small-heading">
+                            <p class="section-label">
+                                Education
+                            </p>
+
+                            <h2>
+                                Academic background.
+                            </h2>
+                        </div>
+
+                        <div class="education-card">
+
+                            <h3>
+                                B.Voc — Software Application Development
+                            </h3>
+
+                            <h4>
+                                XYZ College of Applied Sciences
+                            </h4>
+
+                            <p class="education-date">
+                                2021 — 2024
+                            </p>
+
+                            <p>
+                                Coursework included Programming,
+                                Database Management, Web Development,
+                                Software Engineering, and Computer Networks.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Certifications -->
+                    <div>
+
+                        <div class="section-heading small-heading">
+                            <p class="section-label">
+                                Certifications
+                            </p>
+
+                            <h2>
+                                Continuous learning.
+                            </h2>
+                        </div>
+
+                        <div class="certification-list">
+
+                            <div class="certification-item">
+                                <span>01</span>
+                                <p>Python Programming Fundamentals</p>
+                            </div>
+
+                            <div class="certification-item">
+                                <span>02</span>
+                                <p>SQL and Database Fundamentals</p>
+                            </div>
+
+                            <div class="certification-item">
+                                <span>03</span>
+                                <p>Introduction to Web Development</p>
+                            </div>
+
+                            <div class="certification-item">
+                                <span>04</span>
+                                <p>Git &amp; Version Control Basics</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT SECTION
+        ========================== -->
+        <section class="section contact-section" id="contact">
+
+            <div class="container">
+
+                <div class="contact-box">
+
+                    <div class="contact-content">
+
+                        <p class="section-label">
+                            06 — Contact
+                        </p>
+
+                        <h2>
+                            Let's connect.
+                        </h2>
+
+                        <p>
+                            Whether you'd like to discuss a project,
+                            technology, career opportunity, or simply
+                            connect, feel free to reach out.
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-links">
+
+                        <a
+                            href="mailto:xyz.sample@email.com"
+                            class="contact-link"
+                        >
+                            <span class="contact-icon">✉</span>
+
+                            <div>
+                                <span class="contact-label">
+                                    Email
+                                </span>
+
+                                <span class="contact-value">
+                                    xyz.sample@email.com
+                                </span>
+                            </div>
+                        </a>
+
+
+                        <a
+                            href="tel:+919876543210"
+                            class="contact-link"
+                        >
+                            <span class="contact-icon">☎</span>
+
+                            <div>
+                                <span class="contact-label">
+                                    Phone
+                                </span>
+
+                                <span class="contact-value">
+                                    +91 98765 43210
+                                </span>
+                            </div>
+                        </a>
+
+
+                        <a
+                            href="https://www.linkedin.com/in/xyz-sample"
+                            class="contact-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span class="contact-icon">in</span>
+
+                            <div>
+                                <span class="contact-label">
+                                    LinkedIn
+                                </span>
+
+                                <span class="contact-value">
+                                    linkedin.com/in/xyz-sample
+                                </span>
+                            </div>
+                        </a>
+
+
+                        <a
+                            href="https://github.com/dummygitt"
+                            class="contact-link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <span class="contact-icon">GH</span>
+
+                            <div>
+                                <span class="contact-label">
+                                    GitHub
+                                </span>
+
+                                <span class="contact-value">
+                                    github.com/dummygitt
+                                </span>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="footer">
+
+        <div class="container footer-content">
 
             <div>
-
-                <p class="eyebrow">
-                    GET IN TOUCH
-                </p>
-
-                <h2>
-                    Let's build something
-                    <span>useful.</span>
-                </h2>
+                <a href="#home" class="logo">
+                    XYZ<span>.</span>
+                </a>
 
                 <p>
-                    Interested in software development,
-                    application support, and practical technology
-                    projects.
+                    Junior Developer &amp; Software Support Professional
+                </p>
+            </div>
+
+            <div class="footer-right">
+
+                <p>
+                    © <span id="current-year"></span> XYZ.
+                    All rights reserved.
                 </p>
 
-                <a
-                    href="mailto:xyz.sample@email.com"
-                    class="btn primary"
-                >
-                    Send Me an Email
+                <a href="#home" class="back-to-top" id="back-to-top">
+                    Back to top ↑
                 </a>
 
             </div>
 
-
-            <div class="contact-details">
-
-                <a href="mailto:xyz.sample@email.com">
-                    <strong>Email</strong>
-                    <span>xyz.sample@email.com</span>
-                </a>
-
-                <a href="tel:+919876543210">
-                    <strong>Phone</strong>
-                    <span>+91 98765 43210</span>
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/xyz-sample"
-                    target="_blank"
-                >
-                    <strong>LinkedIn</strong>
-                    <span>linkedin.com/in/xyz-sample</span>
-                </a>
-
-                <a
-                    href="https://github.com/dummygitt"
-                    target="_blank"
-                >
-                    <strong>GitHub</strong>
-                    <span>github.com/dummygitt</span>
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <div class="footer-content">
-
-            <div class="logo">
-                XYZ<span>.</span>
-            </div>
-
-            <p>
-                Designed & built by XYZ
-            </p>
-
-            <div class="footer-links">
-
-                <a
-                    href="https://github.com/dummygitt"
-                    target="_blank"
-                >
-                    GitHub
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/xyz-sample"
-                    target="_blank"
-                >
-                    LinkedIn
-                </a>
-
-            </div>
-
-        </div>
-
-        <div class="copyright">
-            © <span id="year"></span> XYZ. All rights reserved.
         </div>
 
     </footer>
 
 
-    <button
-        class="back-to-top"
-        id="backToTop"
-        aria-label="Back to top"
-    >
-        ↑
-    </button>
-
-
-    <script src="./script.js"></script>
+    <!-- JavaScript -->
+    <script src="./script/script.js"></script>
 
 </body>
 </html>
