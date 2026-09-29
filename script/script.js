@@ -1,225 +1,95 @@
-/* =========================================================
-   XYZ PORTFOLIO
-   Main JavaScript
-   ========================================================= */
+// ===============================
+// Mobile Navigation
+// ===============================
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function () {
+
+    navLinks.classList.toggle("open");
+
+    if (navLinks.classList.contains("open")) {
+        menuBtn.textContent = "✕";
+    } else {
+        menuBtn.textContent = "☰";
+    }
+
+});
 
 
-/* ================= DOM ELEMENTS ================= */
+// Close mobile menu after clicking a link
 
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
-const navLinks = document.querySelectorAll(".nav-link");
+document.querySelectorAll(".nav-links a").forEach(function (link) {
 
-const themeToggle = document.getElementById("theme-toggle");
+    link.addEventListener("click", function () {
 
-const backToTop = document.getElementById("back-to-top");
+        navLinks.classList.remove("open");
 
-const currentYear = document.getElementById("current-year");
-
-
-/* ================= MOBILE MENU ================= */
-
-if (menuToggle && navMenu) {
-
-    menuToggle.addEventListener("click", () => {
-
-        navMenu.classList.toggle("show");
-
-        const icon = menuToggle.querySelector("i");
-
-        if (navMenu.classList.contains("show")) {
-
-            icon.classList.remove("fa-bars");
-            icon.classList.add("fa-xmark");
-
-        } else {
-
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
-
-        }
-
-    });
-
-}
-
-
-/* ================= CLOSE MOBILE MENU ================= */
-
-navLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navMenu.classList.remove("show");
-
-        const icon = menuToggle.querySelector("i");
-
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
+        menuBtn.textContent = "☰";
 
     });
 
 });
 
 
-/* ================= ACTIVE NAVIGATION ================= */
+// ===============================
+// Dark / Light Mode
+// ===============================
 
-const sections = document.querySelectorAll("section[id]");
+const themeBtn = document.getElementById("themeBtn");
 
-
-function updateActiveNavigation() {
-
-    const scrollPosition =
-        window.scrollY + 150;
-
-
-    sections.forEach(section => {
-
-        const sectionTop =
-            section.offsetTop;
-
-        const sectionHeight =
-            section.offsetHeight;
-
-        const sectionId =
-            section.getAttribute("id");
-
-
-        if (
-            scrollPosition >= sectionTop &&
-            scrollPosition < sectionTop + sectionHeight
-        ) {
-
-            navLinks.forEach(link => {
-
-                link.classList.remove("active");
-
-                if (
-                    link.getAttribute("href") ===
-                    `#${sectionId}`
-                ) {
-
-                    link.classList.add("active");
-
-                }
-
-            });
-
-        }
-
-    });
-
-}
-
-
-window.addEventListener(
-    "scroll",
-    updateActiveNavigation
-);
-
-
-/* ================= HEADER SCROLL EFFECT ================= */
-
-const header =
-    document.getElementById("header");
-
-
-function updateHeader() {
-
-    if (window.scrollY > 30) {
-
-        header.style.boxShadow =
-            "0 8px 30px rgba(0, 0, 0, 0.15)";
-
-    } else {
-
-        header.style.boxShadow =
-            "none";
-
-    }
-
-}
-
-
-window.addEventListener(
-    "scroll",
-    updateHeader
-);
-
-
-/* ================= DARK / LIGHT MODE ================= */
-
-const savedTheme =
-    localStorage.getItem("theme");
-
+const savedTheme = localStorage.getItem("portfolio-theme");
 
 if (savedTheme === "light") {
 
-    document.body.classList.add("light-theme");
+    document.body.classList.add("light");
 
-    updateThemeIcon();
+    themeBtn.textContent = "☀";
 
 }
 
 
-function updateThemeIcon() {
+themeBtn.addEventListener("click", function () {
 
-    const icon =
-        themeToggle.querySelector("i");
+    document.body.classList.toggle("light");
 
-    if (
-        document.body.classList.contains(
-            "light-theme"
-        )
-    ) {
+    const isLight =
+        document.body.classList.contains("light");
 
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
+
+    if (isLight) {
+
+        localStorage.setItem(
+            "portfolio-theme",
+            "light"
+        );
+
+        themeBtn.textContent = "☀";
 
     } else {
 
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
+        localStorage.setItem(
+            "portfolio-theme",
+            "dark"
+        );
+
+        themeBtn.textContent = "☾";
 
     }
 
-}
+});
 
 
-if (themeToggle) {
+// ===============================
+// Back to Top
+// ===============================
 
-    themeToggle.addEventListener(
-        "click",
-        () => {
-
-            document.body.classList.toggle(
-                "light-theme"
-            );
+const backToTop =
+    document.getElementById("backToTop");
 
 
-            const isLight =
-                document.body.classList.contains(
-                    "light-theme"
-                );
-
-
-            localStorage.setItem(
-                "theme",
-                isLight ? "light" : "dark"
-            );
-
-
-            updateThemeIcon();
-
-        }
-    );
-
-}
-
-
-/* ================= BACK TO TOP ================= */
-
-function updateBackToTop() {
+window.addEventListener("scroll", function () {
 
     if (window.scrollY > 500) {
 
@@ -231,110 +101,52 @@ function updateBackToTop() {
 
     }
 
-}
+});
 
 
-window.addEventListener(
-    "scroll",
-    updateBackToTop
-);
+backToTop.addEventListener("click", function () {
 
-
-if (backToTop) {
-
-    backToTop.addEventListener(
-        "click",
-        () => {
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-        }
-    );
-
-}
-
-
-/* ================= CURRENT YEAR ================= */
-
-if (currentYear) {
-
-    currentYear.textContent =
-        new Date().getFullYear();
-
-}
-
-
-/* ================= REVEAL ON SCROLL ================= */
-
-const revealElements =
-    document.querySelectorAll(
-        ".skill-card, .project-card, .timeline-item, .organization-card, .info-card"
-    );
-
-
-const revealObserver =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.style.opacity = "1";
-
-                    entry.target.style.transform =
-                        "translateY(0)";
-
-                    revealObserver.unobserve(
-                        entry.target
-                    );
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.1
-        }
-    );
-
-
-revealElements.forEach(element => {
-
-    element.style.opacity = "0";
-
-    element.style.transform =
-        "translateY(25px)";
-
-    element.style.transition =
-        "opacity 0.6s ease, transform 0.6s ease";
-
-    revealObserver.observe(element);
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 });
 
 
-/* ================= TYPING EFFECT ================= */
+// ===============================
+// Current Year
+// ===============================
 
-const statusElement =
-    document.querySelector(
-        ".code-body div:last-child"
-    );
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
 
-/* ================= INITIALIZATION ================= */
+// ===============================
+// Smooth Navigation
+// ===============================
 
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
+document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
-        updateActiveNavigation();
-        updateHeader();
-        updateBackToTop();
+    link.addEventListener("click", function (event) {
 
-    }
-);
+        const targetId =
+            this.getAttribute("href");
+
+        const target =
+            document.querySelector(targetId);
+
+
+        if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    });
+
+});
